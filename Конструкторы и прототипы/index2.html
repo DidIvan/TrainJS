@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property constructor</title>
+</head>
+<body>
+<script>
+    /*Создаем несколько обьектов используя различные конструкторы*/
+    var myArray = new Array(10);
+    var myDate = new Date();
+    var myString = String("Some string value");
+    var myObj = Object();
+    var myFunc=new Function();
+    new Function('x', 'y', 'return x+y')
+
+    function shouConstr(obj,name){
+        document.write("Constructor of object "+name + " this is " +obj.constructor+'<br/>');
+    }
+
+    shouConstr(myArray,'myArray');
+    shouConstr(myObj,'myObj');
+</script>
+</body>
+</html>
