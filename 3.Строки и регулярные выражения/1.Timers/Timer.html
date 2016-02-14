@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Работа с таймерами</title>
+</head>
+<body>
+
+<script>
+//setTimeout()- планирует один запуск указанной функции через определенное время(количество милисекунд),
+// в нашем случае 5 секунд.
+
+// 1) variant using setTimeout()
+    setTimeout(showMessage, 5000);
+    function showMessage() {
+        alert("Hello");
+    }
+
+// 2) another variant using setTimeout()
+    setTimeout(function(){
+        alert("Whats up?")
+    },10000)
+
+</script>
+</body>
+</html>

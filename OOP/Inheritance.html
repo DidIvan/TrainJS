@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Наследование</title>
+</head>
+<body>
+<p>Наследование - это механизм позволяющий передать поведение и свойства от одного обьекта к другому.</p>
+<script>
+    <!--создаем функцию конструктор-->
+    function Human(name) {
+        this.name = name;
+        this.talk = function () {
+            document.write("My name is " + this.name + "<br/>")
+        };
+    }
+
+    //    создаем производную функцию конструктор
+    function Student(name) {
+        this.name = name;
+        this.school = "school#5";
+    }
+    function Worker(name) {
+        this.name = name;
+        this.profecion = "Software developer";
+    }
+    ;
+    //создаем экземпляр родителя Human
+    var human=new Human();
+
+// наследуем Student и Worker от Human устанавливая функцию как прототип
+    Student.prototype=human;
+    Worker.prototype=human;
+
+    var Alex = new Student("Alexandr");
+    document.write(Alex.name);
+    Alex.talk();
+
+</script>
+</body>
+</html>

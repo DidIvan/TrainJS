@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>method CompareTo</title>
+</head>
+<body>
+<p>Метод позволяет сравнивать обьекты между собой</p>
+<script>
+    function Rectangle(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    Rectangle.prototype.getArea = function () {
+        return this.width * this.height;
+    };
+
+    Rectangle.prototype.name = "Rectangle";
+
+    Rectangle.prototype.compareTo = function (othObject) {
+        if (this.getArea() > othObject.getArea()) {
+            return 1;
+        } else if (this.getArea() < othObject.getArea()) {
+            return -1;
+        }
+        else if (this.getArea() == othObject.getArea()) {
+            return 0;
+        }
+    }
+    ;
+
+    var a = new Rectangle(8, 5);
+    var b = new Rectangle(3, 5);
+
+    document.write(a.compareTo(b));
+</script>
+
+</body>
+</html>

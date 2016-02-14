@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setInterval</title>
+</head>
+<body>
+<script>
+    //setInterval - планирование неоднократного запуска функции с заданым интервалом.
+    var counter = 0;
+
+    function Count() {
+        counter++;
+        document.getElementById("output").innerHTML = counter;
+    }
+
+    setInterval(Count, 2000);
+</script>
+<p id="output">0</p>
+</body>
+</html>

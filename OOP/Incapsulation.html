@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Инкапсуляция</title>
+</head>
+<body>
+<p>Инкапсуляция это сокрытие реализации и данных обьекта</p>
+
+<p>То есть обьект может прятать от внешнего мира методы и свойства, чтобы другие не могли ними пользоваться!</p>
+<script>
+    //создаем конструктор
+    var MyClass = function () {
+        var privateMethod = function () {
+            document.write("Закрытый метод");
+        };
+
+        this.publicMethod = function () {
+            document.write("Открытий метод");
+            privateMethod()
+        };
+    };
+    var obj = new MyClass();
+    obj.publicMethod();
+
+    obj.privateMethod()//ошибка
+</script>
+</body>
+</html>

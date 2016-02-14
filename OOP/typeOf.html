@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Оператор typeOf</title>
+</head>
+<body>
+<p>Позволяет определить к какому типу данных принадлежит обьект. Возвращает строку в которой записан тип обьектаю.</p>
+<script>
+    var test1 = "Haha";
+    document.write(typeof test1+"</br>");
+
+    var test2 = 324;
+    document.write(typeof test2+"</br>");
+
+    var test3 = true;
+    document.write(typeof test3+"</br>");
+
+    var test4;
+    document.write(typeof test4+"</br>");
+
+    var test5 = new Array();
+    document.write(typeof test5+"</br>");
+
+//    Пример использования
+
+    function printMessege(messege){
+//        проверка типа параметра функции
+        if (typeof messege!="string"){
+            alert("параметр должен быть строкового типа!")
+        }else{
+            document.write(messege)
+        }
+    }
+
+    printMessege("Hello people!");
+</script>
+
+</body>
+</html>
